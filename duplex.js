@@ -1,0 +1,5 @@
+var fs=require("fs")
+var readstream=fs.createReadStream("temp.txt")
+var writestream=fs.createWriteStream("output.txt")
+readstream.pipe(writestream)
+console.log("successfully moved input data to output")
